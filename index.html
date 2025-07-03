@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My N3tw0rk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LOGIN -->
+  <div id="loginSection">
+    <h1>My N3tw0rk</h1>
+    <input type="text" id="inputID" placeholder="Ingresa tu ID">
+    <button onclick="login()">Ingresar</button>
+    <div id="loginError" class="error"></div>
+    <button onclick="mostrarSolicitud()">Solicitar nuevo ID</button>
+  </div>
+
+  <!-- SOLICITUD -->
+  <div id="solicitudSection" style="display:none;">
+    <h2>Pedir nuevo ID</h2>
+    <input type="text" id="nuevoID" placeholder="ID deseado">
+    <input type="text" id="nuevoNombre" placeholder="Nombre de usuario">
+    <input type="number" id="nuevoNivel" placeholder="Nivel de clearance (1-5)" min="1" max="5">
+    <input type="email" id="nuevoEmail" placeholder="Correo electrónico">
+    <button onclick="enviarSolicitud()">Enviar solicitud</button>
+    <div id="solicitudResult" class="error"></div>
+    <button onclick="volverLogin()">Volver al login</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display:none;">
+    <h2>Bienvenido, <span id="username"></span></h2>
+    <div class="modules" id="modulesContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
