@@ -1,4 +1,4 @@
-const API = "http://104.7.226.51:5006";
+const API = "http://104.7.226.51: 5006";
 
 let solicitudesActuales = [];
 
